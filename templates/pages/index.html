@@ -3,13 +3,16 @@
 {% block body %}
     <div class="header-row">
         <div class="row">
-            <div class="small-12 large-2 columns large-text-right">
+            <div class="small-12 medium-2 large-2 columns large-text-right hide-for-small-only">
                 <span class="fi-dislike header-icon"></span>
             </div>
-            <div class="small-12 large-10 columns">
+            <div class="small-12 medium-10 large-10 columns">
                 <h1>Who Do I Blame?</h1>
                 <form action="/" method="POST">
-                    <input type="text" class="radius textfield-big" value="{{address}}" name="address" placeholder="Where are you?">
+                    <label>
+                        <input type="text" class="radius textfield-big" value="{{address}}" name="address" placeholder="Where are you?">
+                        Try to be as specific as possible (9-digit zip code, full street address, etc)
+                    </label>
                 </form>
             </div>
         </div>
@@ -25,6 +28,7 @@
                     <h2 class="rep-title">{{rep.title}} {{rep.person.firstname}} {{rep.person.lastname}}</h2>
                     <a href="{{rep.person.link}}"><img src="https://www.govtrack.us/data/photos/{{rep.person.id}}-200px.jpeg" class="rep-photo th"></a>
                     <div class="rep-links">
+                        <a href="{{rep.person.link}}" class="fi-info rep-link"></a>
                         <a href="{{rep.website}}" class="fi-link rep-link"></a>
                         {% if rep.person.twitterid %}
                             <a href="https://twitter.com/{{rep.person.twitterid}}" class="fi-social-twitter rep-link"></a>

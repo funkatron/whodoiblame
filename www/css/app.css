@@ -3,6 +3,10 @@ input[type="text"].textfield-big {
     height:auto;
 }
 
+label {
+    color: #CCCCCC;
+}
+
 .header-row {
     background-color: #333;
     color: white;
@@ -26,7 +30,7 @@ input[type="text"].textfield-big {
 }
 
 .rep-link {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .rep-label {
