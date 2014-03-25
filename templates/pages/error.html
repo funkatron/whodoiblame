@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <div class="header-row">
+        <div class="row">
+            <div class="small-12 medium-2 large-2 columns large-text-right hide-for-small-only">
+                <span class="fi-dislike header-icon"></span>
+            </div>
+            <div class="small-12 medium-10 large-10 columns">
+                <h1>Who Do I Blame?</h1>
+                <form action="/" method="POST">
+                    <label>
+                        <input type="text" class="radius textfield-big" value="" name="address" placeholder="Where are you?">
+                        Try to be as specific as possible (9-digit zip code, full street address, etc)
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-9 large-centered small-12 small-centered columns">
+        <h2>Something went horribly wrong.</h2>
+        {% if error_msg %}
+            <p class="subheader">{{error_msg}}</p>
+        {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

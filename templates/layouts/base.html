@@ -1,23 +1,54 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="/css/foundation.css" />
-    <link rel="stylesheet" href="/css/fonts/foundation-icons.css" />
-    <link rel="stylesheet" href="/css/app.css" />
-    <script src="/js/vendor/modernizr.js"></script>
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Who Do I Blame? {% block title %}{% endblock %}</title>
 
-  {% block body %}
+        <link rel="icon" href="/favicon_48x48.ico" type="image/x-icon">
 
-  {% endblock %}
-    <script src="/js/vendor/jquery.js"></script>
-    <script src="/js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icon-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icon-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="/img/icon-56.png">
+
+        <link rel="stylesheet" href="/css/foundation.css" />
+        <link rel="stylesheet" href="/css/fonts/foundation-icons.css" />
+        <link rel="stylesheet" href="/css/app.css" />
+        <script src="/js/vendor/modernizr.js"></script>
+    </head>
+    <body>
+        {% block body %}
+
+        {% endblock %}
+        <div class="footer-row">
+            <div class="row">
+                <div class="small-12">
+                    <p class="text-center">A <strong><a href="http://funkatron.com">Funkatron</a></strong> production. Data provided by <a href="http://geocod.io/">Geocod.io</a> and <a href="https://www.govtrack.us">Govtrack.us</a>. This will only work in the US.</p>
+
+                    <p class="text-center"><a href="https://github.com/funkatron/whodoiblame" class="fi-social-github github-footer-link"> Source code</a>.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+
+        <script type="text/javascript">
+        var clicky_site_ids = clicky_site_ids || [];
+        clicky_site_ids.push(100720742);
+        (function() {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//static.getclicky.com/js';
+          ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+        })();
+        </script>
+        <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100720742ns.gif" /></p></noscript>
+    </body>
 </html>

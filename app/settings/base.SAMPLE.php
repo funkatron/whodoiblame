@@ -26,6 +26,10 @@ $BASE_APP_SETTINGS = [
 
     "csrf.secret" => "FIX_ME",
 
+    "memcached.host" => "localhost",
+    "memcached.port" => 11211,
+    "memcached.default.expiration" => "+24 hours",
+
     "geocodio.api.base" => "http://api.geocod.io/v1/",
     "geocodio.api.key" => "FIX_ME",
     "govtrack.api.base" => "https://www.govtrack.us/api/v2/",
