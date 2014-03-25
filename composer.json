@@ -1,0 +1,16 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "slim/views": "0.1.*",
+        "twig/twig": "1.15.0",
+        "resty/resty": "dev-master",
+        "funkatron/funit": "dev-master",
+        "fzaninotto/faker": "v1.3.0",
+        "monolog/monolog": "1.7.0",
+        "vlucas/valitron": "dev-master#e011ab81c43903e73b766620828877b828e65380"
+    },
+
+    "autoload": {
+        "psr-4": {"BlameApp\\": "./app/"}
+    }
+}

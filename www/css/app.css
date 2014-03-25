@@ -1,0 +1,21 @@
+input[type="text"].textfield-big {
+    font-size: 2em;
+    height:auto;
+}
+
+.rep-title {
+    font-size: 14pt;
+}
+
+.rep-photo-container {
+    padding: 10px;
+    border:1px solid #CCCCCC;
+}
+
+.rep-link {
+    font-size: 24px;
+}
+
+.rep-label {
+    vertical-align: super;
+}

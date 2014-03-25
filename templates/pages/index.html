@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+    <div class="row">
+        <div class="small-9 small-centered columns">
+            <h1>Who Do I Blame?</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <form action="/" method="POST">
+            <div class="small-9 small-centered columns">
+                <input type="text" class="textfield-big" value="{{address}}" name="address" placeholder="Where are you?">
+            </div>
+        </form>
+    </div>
+
+    {% if reps %}
+    <div class="row">
+        <div class="small-9 small-centered columns">
+            <ul class="small-block-grid-3">
+            {% for rep in reps %}
+                <li>
+                    <h2 class="rep-title">{{rep.title}} {{rep.person.firstname}} {{rep.person.lastname}}</h2>
+                    <a href="{{rep.person.link}}"><img src="https://www.govtrack.us/data/photos/{{rep.person.id}}-200px.jpeg" class="rep-photo th"></a>
+                    <div class="rep-links">
+                        <a href="{{rep.website}}" class="fi-link rep-link"></a>
+                        {% if rep.person.twitterid %}
+                            <a href="https://twitter.com/{{rep.person.twitterid}}" class="fi-social-twitter rep-link"></a>
+                        {% endif %}
+                        {% if rep.person.youtubeid %}
+                            <a href="http://youtube.com/{{rep.person.youtubeid}}" class="fi-social-youtube rep-link"></a>
+                        {% endif %}
+                        <span class="radius label secondary rep-label">{{rep.party}}</span>
+
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}
