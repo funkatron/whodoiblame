@@ -3,6 +3,19 @@ input[type="text"].textfield-big {
     height:auto;
 }
 
+.header-row {
+    background-color: #333;
+    color: white;
+    padding:2rem 0;
+}
+.header-row h1 {
+    color: white;
+}
+
+.header-icon {
+    font-size:144px;
+}
+
 .rep-title {
     font-size: 14pt;
 }
@@ -18,4 +31,12 @@ input[type="text"].textfield-big {
 
 .rep-label {
     vertical-align: super;
+}
+
+@media only screen and (min-width: 40.063em) {
+    .header-row {
+        background-color: #333;
+        color: white;
+        padding:6rem 0;
+    }
 }

@@ -1,24 +1,25 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-    <div class="row">
-        <div class="small-9 small-centered columns">
-            <h1>Who Do I Blame?</h1>
+    <div class="header-row">
+        <div class="row">
+            <div class="small-12 large-2 columns large-text-right">
+                <span class="fi-dislike header-icon"></span>
+            </div>
+            <div class="small-12 large-10 columns">
+                <h1>Who Do I Blame?</h1>
+                <form action="/" method="POST">
+                    <input type="text" class="radius textfield-big" value="{{address}}" name="address" placeholder="Where are you?">
+                </form>
+            </div>
         </div>
     </div>
 
     <div class="row">
-        <form action="/" method="POST">
-            <div class="small-9 small-centered columns">
-                <input type="text" class="textfield-big" value="{{address}}" name="address" placeholder="Where are you?">
-            </div>
-        </form>
-    </div>
-
-    {% if reps %}
-    <div class="row">
-        <div class="small-9 small-centered columns">
-            <ul class="small-block-grid-3">
+        {% if reps %}
+        <div class="large-9 large-centered small-12 small-centered columns">
+            <hr>
+            <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
             {% for rep in reps %}
                 <li>
                     <h2 class="rep-title">{{rep.title}} {{rep.person.firstname}} {{rep.person.lastname}}</h2>
@@ -38,7 +39,7 @@
             {% endfor %}
             </ul>
         </div>
+        {% endif %}
     </div>
-    {% endif %}
 
 {% endblock %}
