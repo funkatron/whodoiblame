@@ -1,6 +1,8 @@
 {% extends "layouts/base.html" %}
 
+{% if region_description %}
 {% block title %}: {{region_description}}{% endblock %}
+{% endif %}
 
 {% block body %}
     <div class="header-row">
