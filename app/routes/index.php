@@ -26,7 +26,7 @@ $app->get('/:state/:district', function($state, $district) use ($app) {
         $gov = new GovtrackApi($app);
         $rs = $gov->get('role', [
                         "state" => $state,
-                        "current" => true,
+                        "current" => 'true',
                     ]);
         if ($rs['status'] !== 200) {
             $app->render('pages/error.html', ['error_msg' => 'Oh crap.'], 500);
